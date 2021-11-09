@@ -3,6 +3,7 @@ const mongoose=require('mongoose')
 const hbs= require('hbs')
 const path=require('path')
 const indexRouter = require('./routers/index')
+const authorRouter = require('./routers/authors')
 
 
 
@@ -31,6 +32,7 @@ db.once('open',()=>{console.log('connceted ')})
 
 
 app.use('/',indexRouter)
+app.use('/author',authorRouter)
 
 
 
